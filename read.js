@@ -15,6 +15,7 @@ let validCID = 'QmSDusTRMy1M7CyZkkq7AHpp7n8KGJ2FokRq4VWq1kHR79';
 
 ipfs.files.get(validCID, function(err, files) {
   files.forEach((file) => {
-    console.log(file)
+    console.log(file.path)
+    console.log(file.content.toString('utf8'))
   })
 })
